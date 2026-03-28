@@ -1,0 +1,15 @@
+schema: spec-driven
+
+context: |
+  Tech stack: Vue.js 3 (Composition API + <script setup>), Vite, pusher-js (前端); Node.js, Express, pusher Server SDK, dotenv, cors (後端)
+  即時通訊: Pusher Channels — channel 名稱 `chat-room`，事件名稱 `new-message`
+  專案結構: 前後端分離，frontend/ (Vite port 5173) + backend/ (Express port 4000)
+  環境變數: 全部使用 VITE_ 前綴，存於根目錄 .env；後端以 path.join(__dirname, '../.env') 載入
+  CORS: 後端允許所有 localhost 端口 (regex)
+  UI 風格: 仿 LINE — 綠色 header (#00b900)、自己訊息右側綠色氣泡 (#4cd964)、他人訊息左側白色氣泡
+  無資料庫、無使用者驗證；訊息不持久化
+
+rules:
+  tasks:
+    - 每個 task 應可在單一 session 內完成
+    - 驗證步驟標註（手動驗證）或（自動測試）
