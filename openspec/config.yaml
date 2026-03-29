@@ -1,7 +1,7 @@
 schema: spec-driven
 
 context: |
-  Tech stack: Vue.js 3 (Composition API + <script setup>), Vite, pusher-js (前端); Node.js, Express, pusher Server SDK, dotenv, cors (後端)
+  Tech stack: Vue.js 3 (Composition API + <script setup>), Vite, Tailwind CSS v4 (@tailwindcss/vite), pusher-js (前端); Node.js, Express, pusher Server SDK, dotenv, cors (後端)
   即時通訊: Pusher Channels — channel 名稱 `chat-room`，事件名稱 `new-message`
   專案結構: 前後端分離，frontend/ (Vite port 5173) + backend/ (Express port 4000)
   環境變數: 全部使用 VITE_ 前綴，存於根目錄 .env；後端以 path.join(__dirname, '../.env') 載入

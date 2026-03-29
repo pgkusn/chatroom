@@ -4,11 +4,11 @@
 
 ## 技術棧
 
-| 層級 | 技術 |
-|---|---|
-| 前端 | Vue.js 3 (Composition API)、Vite、pusher-js |
-| 後端 | Node.js、Express、pusher (Server SDK) |
-| 即時通訊 | Pusher Channels |
+| 層級     | 技術                                                      |
+| -------- | --------------------------------------------------------- |
+| 前端     | Vue.js 3 (Composition API)、Vite、Tailwind CSS、pusher-js |
+| 後端     | Node.js、Express、pusher (Server SDK)                     |
+| 即時通訊 | Pusher Channels                                           |
 
 ## 專案結構
 
@@ -42,11 +42,13 @@ VITE_PUSHER_CLUSTER=your_cluster
 ## 啟動方式
 
 **Terminal 1 — 後端：**
+
 ```bash
 node backend/server.js
 ```
 
 **Terminal 2 — 前端：**
+
 ```bash
 cd frontend
 npm run dev
@@ -70,6 +72,7 @@ npm run dev
 觸發 Pusher 事件，廣播訊息至所有連線用戶端。
 
 **Request body：**
+
 ```json
 {
   "username": "Alice",
@@ -79,5 +82,6 @@ npm run dev
 ```
 
 **Response：**
+
 - `200 OK` — `{ "status": "ok" }`
 - `400 Bad Request` — `{ "error": "username and message are required" }`

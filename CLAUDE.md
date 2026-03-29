@@ -24,7 +24,7 @@ cd frontend && npm run build    # 生產建構
 ```
 
 - **後端**（`backend/server.js`）：單一檔案 Express app，只有一個路由 `POST /api/messages`。收到訊息後呼叫 `pusher.trigger('chat-room', 'new-message', payload)`。
-- **前端**（`frontend/src/App.vue`）：單一 Vue 3 SFC，`onMounted` 訂閱 Pusher channel，`sendMessage()` POST 至後端。`frontend/src/pusher.js` 導出已初始化的 Pusher 實例。
+- **前端**（`frontend/src/App.vue`）：單一 Vue 3 SFC，`onMounted` 訂閱 Pusher channel，`sendMessage()` POST 至後端。`frontend/src/pusher.js` 導出已初始化的 Pusher 實例。樣式使用 **Tailwind CSS v4**（`@tailwindcss/vite` plugin），所有 class 為 utility classes，無自訂 CSS 區塊。
 
 ## 環境變數
 
@@ -38,7 +38,7 @@ VITE_PUSHER_CLUSTER=...
 ```
 
 - 後端：`require('dotenv').config({ path: path.join(__dirname, '../.env') })`（相對於 `backend/` 目錄）
-- 前端：`vite.config.js` 設定 `envDir: '../'`，Vite 自動暴露 `VITE_` 前綴變數
+- 前端：`vite.config.js` 設定 `envDir: '../'`，Vite 自動暴露 `VITE_` 前綴變數；同時載入 `@tailwindcss/vite` plugin
 
 ## 注意事項
 
